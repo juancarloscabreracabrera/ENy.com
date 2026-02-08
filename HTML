@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Worksheet - Saúl's Story</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Patrick+Hand&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+            color: #1f2937;
+        }
+        .worksheet-container {
+            max-width: 950px;
+            margin: 2rem auto;
+            background: white;
+            padding: 3rem;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            border-radius: 12px;
+        }
+        .instruction-box {
+            background-color: #f9fafb;
+            border-left: 4px solid #3b82f6;
+            padding: 1.25rem;
+            margin-bottom: 1.5rem;
+        }
+        .image-card {
+            border: 1px solid #e5e7eb;
+            border-radius: 16px;
+            overflow: hidden;
+            background-color: #fff;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        .image-container {
+            width: 100%;
+            aspect-ratio: 1/1;
+            background-color: #f3f4f6;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .sequence-input {
+            width: 48px;
+            height: 48px;
+            text-align: center;
+            border: 4px solid #3b82f6;
+            border-radius: 50%;
+            font-weight: 800;
+            font-size: 1.25rem;
+            margin-top: -24px;
+            background: white;
+            position: relative;
+            z-index: 10;
+            box-shadow: 0 4px 6px rgba(59, 130, 246, 0.3);
+        }
+        
+        /* Mind Map Styles */
+        .bubble-container {
+            border-radius: 24px;
+            padding: 1.5rem;
+            min-height: 140px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border: 2px solid transparent;
+        }
+        .bubble-recipient { background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%); border-color: #93c5fd; }
+        .bubble-phrase { background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); border-color: #86efac; }
+        .bubble-reminder { background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%); border-color: #fcd34d; }
+        .bubble-giver { background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%); border-color: #d8b4fe; }
+        
+        .bubble-textarea {
+            background: transparent;
+            border: none;
+            width: 100%;
+            text-align: center;
+            resize: none;
+            font-family: 'Patrick Hand', cursive;
+            font-size: 1.2rem;
+            color: #374151;
+            outline: none;
+        }
+        .bubble-textarea::placeholder { color: #9ca3af; font-family: 'Inter', sans-serif; font-size: 0.875rem; }
+
+        @media print {
+            body { background: white; }
+            .worksheet-container { box-shadow: none; margin: 0; width: 100%; padding: 1rem; }
+            button { display: none; }
+            .image-card { break-inside: avoid; }
+            .bubble-container { border: 2px solid #ccc; background: none !important; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="worksheet-container">
+    <header class="flex justify-between items-center border-b-2 pb-6 mb-8">
+        <div>
+            <h1 class="text-3xl font-extrabold text-slate-800 tracking-tight">English Evaluation</h1>
+            <p class="text-blue-600 font-semibold">Reading Comprehension & Written Production</p>
+        </div>
+        <div class="text-right text-sm font-medium bg-slate-50 p-3 rounded-lg border">
+            <p>Points Total: <span class="font-bold">23</span></p>
+            <p>Score: <span class="text-slate-300">_______</span></p>
+        </div>
+    </header>
+
+    <!-- Part 1: Reading & Sequencing -->
+    <section class="mb-16">
+        <div class="instruction-box">
+            <h2 class="font-bold uppercase text-blue-800 text-lg mb-1 flex items-center">
+                <span class="bg-blue-800 text-white rounded-full w-8 h-8 flex items-center justify-center mr-2 text-sm">1</span>
+                Part I: Sequencing
+            </h2>
+            <p class="text-slate-600 ml-10">Read Saúl's story. Then, look at the images and order the events from 1 to 5.</p>
+        </div>
+
+        <div class="bg-gradient-to-r from-blue-50 to-indigo-50 p-8 rounded-2xl border-l-8 border-blue-500 mb-10 italic leading-relaxed text-xl text-slate-700 shadow-sm relative">
+            <span class="absolute top-2 left-3 text-4xl text-blue-200 opacity-50 font-serif">"</span>
+            I am Saúl. A few days ago, I went to visit my grandma in Palmares. My grandmother made a delicious beef soup, after eating, I went to play soccer with my cousins Mathias and Joseph. At night, I felt a headache and started sweating. Then, I had stomachache, and vomits. She took me to the doctor, and I was treated for an indigestion. The doctor sent me medication. I hope I feel better tomorrow.
+            <span class="absolute bottom-0 right-4 text-4xl text-blue-200 opacity-50 font-serif">"</span>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-6 mb-4 px-2">
+            <!-- Event: Doctor -->
+            <div class="flex flex-col items-center">
+                <div class="image-card w-full">
+                    <div class="image-container">
+                        <img src="https://img.freepik.com/premium-vector/male-doctor-examining-child-patient-with-stethoscope-medicine-vector-cartoon-illustration_1271121-1169.jpg" alt="Doctor giving medicine">
+                    </div>
+                </div>
+                <input type="number" min="1" max="5" class="sequence-input" placeholder="?">
+            </div>
+
+            <!-- Event: Grandma Visit -->
+            <div class="flex flex-col items-center">
+                <div class="image-card w-full">
+                    <div class="image-container">
+                        <img src="https://media.istockphoto.com/id/532975706/vector/grandson-hugging-his-grandmother-vector-illustration.jpg?s=612x612&w=0&k=20&c=fJYoRRJha4Zw8RdVU5QMgWzEbIQUIEGUlsXPN98t3-E=" alt="Old house in a village">
+                    </div>
+                </div>
+                <input type="number" min="1" max="5" class="sequence-input" placeholder="?">
+            </div>
+
+            <!-- Event: Soccer -->
+            <div class="flex flex-col items-center">
+                <div class="image-card w-full">
+                    <div class="image-container">
+                        <img src="https://img.freepik.com/premium-vector/happy-cute-little-boy-playing-soccer-football-game-action-cartoon-vector-illustration_135170-2426.jpg?w=360" alt="Children playing soccer">
+                    </div>
+                </div>
+                <input type="number" min="1" max="5" class="sequence-input" placeholder="?">
+            </div>
+
+             <!-- Event: Feeling Sick -->
+             <div class="flex flex-col items-center">
+                <div class="image-card w-full">
+                    <div class="image-container">
+                        <img src="https://www.shutterstock.com/image-vector/illustration-little-boy-vomiting-while-600nw-2383965599.jpg" alt="Sick person in bed">
+                    </div>
+                </div>
+                <input type="number" min="1" max="5" class="sequence-input" placeholder="?">
+            </div>
+
+            <!-- Event: Beef Soup -->
+            <div class="flex flex-col items-center">
+                <div class="image-card w-full">
+                    <div class="image-container">
+                        <img src="https://t4.ftcdn.net/jpg/17/12/66/57/360_F_1712665794_cZE5LNyV4zgaYAJ35VrLwTpe0NwCjOEf.jpg" alt="Bowl of beef soup">
+                    </div>
+                </div>
+                <input type="number" min="1" max="5" class="sequence-input" placeholder="?">
+            </div>
+        </div>
+    </section>
+
+    <!-- Part 2: Written Production -->
+    <section>
+        <div class="instruction-box bg-purple-50 border-purple-400">
+            <h2 class="font-bold uppercase text-purple-800 text-lg mb-1 flex items-center">
+                <span class="bg-purple-800 text-white rounded-full w-8 h-8 flex items-center justify-center mr-2 text-sm">2</span>
+                Part II: Written Production
+            </h2>
+            <p class="text-slate-600 ml-10">Complete the mind-map to send a reminder. Write complete sentences with correct grammar.</p>
+        </div>
+
+        <div class="flex flex-col md:flex-row items-stretch justify-between gap-4 mb-12 mt-8 px-2">
+            <!-- Recipient -->
+            <div class="flex-1 group">
+                <label class="block text-center font-bold text-xs mb-2 uppercase text-blue-600 tracking-widest">1. Recipient</label>
+                <div class="bubble-container bubble-recipient">
+                    <textarea class="bubble-textarea h-20" placeholder="Who receives the message? (e.g., Dear Mom,)"></textarea>
+                </div>
+            </div>
+            
+            <div class="flex items-center justify-center text-slate-300 text-2xl rotate-90 md:rotate-0">➜</div>
+
+            <!-- Polite Phrase -->
+            <div class="flex-1">
+                <label class="block text-center font-bold text-xs mb-2 uppercase text-green-600 tracking-widest">2. Polite Phrase</label>
+                <div class="bubble-container bubble-phrase">
+                    <textarea class="bubble-textarea h-20" placeholder="A kind opening (e.g., Please remember...)"></textarea>
+                </div>
+            </div>
+
+            <div class="flex items-center justify-center text-slate-300 text-2xl rotate-90 md:rotate-0">➜</div>
+
+            <!-- Reminder -->
+            <div class="flex-[1.5]">
+                <label class="block text-center font-bold text-xs mb-2 uppercase text-amber-600 tracking-widest">3. Reminder</label>
+                <div class="bubble-container bubble-reminder">
+                    <textarea class="bubble-textarea h-20" placeholder="What is the important action or task?"></textarea>
+                </div>
+            </div>
+
+            <div class="flex items-center justify-center text-slate-300 text-2xl rotate-90 md:rotate-0">➜</div>
+
+            <!-- Giver -->
+            <div class="flex-1">
+                <label class="block text-center font-bold text-xs mb-2 uppercase text-purple-600 tracking-widest">4. Giver</label>
+                <div class="bubble-container bubble-giver">
+                    <textarea class="bubble-textarea h-20" placeholder="Your name (e.g., From, Saúl)"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <!-- Rubric -->
+        <div class="overflow-hidden rounded-xl border border-slate-200 shadow-sm">
+            <table class="w-full text-left border-collapse">
+                <thead>
+                    <tr class="bg-slate-800 text-white text-[11px] uppercase tracking-wider">
+                        <th class="p-3 border-r border-slate-700">Criteria</th>
+                        <th class="p-3 border-r border-slate-700">3 pts (Excellent)</th>
+                        <th class="p-3 border-r border-slate-700">2 pts (Good)</th>
+                        <th class="p-3 border-r border-slate-700">1 pt (Fair)</th>
+                        <th class="p-3">0 pts</th>
+                    </tr>
+                </thead>
+                <tbody class="text-[11px] md:text-xs text-slate-600">
+                    <tr class="border-b bg-white">
+                        <td class="p-3 font-bold bg-slate-50 border-r">Content</td>
+                        <td class="p-3 border-r">All 4 mind-map steps are fully completed.</td>
+                        <td class="p-3 border-r">3 steps are completed correctly.</td>
+                        <td class="p-3 border-r">Only 1-2 steps are completed.</td>
+                        <td class="p-3">No work submitted.</td>
+                    </tr>
+                    <tr class="border-b bg-slate-50/30">
+                        <td class="p-3 font-bold bg-slate-50 border-r">Coherence</td>
+                        <td class="p-3 border-r">The message is logical and very clear.</td>
+                        <td class="p-3 border-r">The message is understandable.</td>
+                        <td class="p-3 border-r">Message is confusing or fragmented.</td>
+                        <td class="p-3">No work submitted.</td>
+                    </tr>
+                    <tr class="bg-white">
+                        <td class="p-3 font-bold bg-slate-50 border-r">Accuracy</td>
+                        <td class="p-3 border-r">Perfect spelling and grammar.</td>
+                        <td class="p-3 border-r">1-2 minor spelling mistakes.</td>
+                        <td class="p-3 border-r">Many errors that block meaning.</td>
+                        <td class="p-3">No work submitted.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <footer class="mt-12 pt-8 border-t border-slate-100 text-center">
+        <button onclick="window.print()" class="bg-blue-600 text-white px-10 py-3 rounded-full font-bold shadow-lg hover:bg-blue-700 transform hover:scale-105 transition-all">
+            Download or Print PDF
+        </button>
+    </footer>
+</div>
+
+</body>
+</html>
